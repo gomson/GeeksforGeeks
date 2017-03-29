@@ -1,2 +1,2 @@
 # GeeksforGeeks-Practice
-www.practice.geeksforgeeks.org
+www.geeksforgeeks.org
