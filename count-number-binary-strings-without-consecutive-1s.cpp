@@ -1,9 +1,8 @@
-// Consecutive 1's not allowed
+// Count number of binary strings without consecutive 1's
+// http://www.geeksforgeeks.org/count-number-binary-strings-without-consecutive-1s/
 // http://practice.geeksforgeeks.org/problems/consecutive-1s-not-allowed/0
 
 /*
-Count number of binary strings without consecutive 1's
-http://www.geeksforgeeks.org/count-number-binary-strings-without-consecutive-1s/
 Problem Description:
 Given a positive integer N, count all possible distinct binary strings of length N such that there are no consecutive 1’s. Output your answer mod 10^9 + 7.
 
