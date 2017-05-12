@@ -1,4 +1,4 @@
-# GeeksforGeeks-Practice
+# GeeksforGeeks
 www.geeksforgeeks.org
 
 | Title | Solution | Difficulty |
