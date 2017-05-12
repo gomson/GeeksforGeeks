@@ -3,7 +3,6 @@
 // http://practice.geeksforgeeks.org/problems/consecutive-1s-not-allowed/0
 
 /*
-Problem Description:
 Given a positive integer N, count all possible distinct binary strings of length N such that there are no consecutive 1’s. Output your answer mod 10^9 + 7.
 
 Input:
