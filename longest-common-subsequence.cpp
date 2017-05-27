@@ -43,20 +43,22 @@ LCS of "ABC" and "AC" is "AC" of length 2
 using namespace std;
 
 int LCS(string str1, int m, string str2, int n) {
-	int OPT[101][101];
-	OPT[0][0] = 0;
-	for (int i = 1; i < m + 1; i++) {
-		OPT[i][0] = 0;
-	}
-	for (int i = 1; i < n + 1; i++) {
-		OPT[0][i] = 0;
-	}
-	for (int i = 1; i < m + 1; i++) {
-		for (int j = 1; j < n + 1; j++) {
-			OPT[i][j] = str1[i - 1] == str2[j - 1] ? OPT[i - 1][j - 1] + 1 : max(OPT[i - 1][j], OPT[i][j - 1]);
+	vector<vector<int>> OPT(2, vector<int>(n + 1, 0));
+	for (int i = 0; i < m + 1; i++) {
+		for (int j = 0; j < n + 1; j++) {
+			int k = i % 2;
+			if (i == 0 or j == 0) {
+				OPT[k][j] = 0;
+			}
+			else if (str1[i - 1] == str2[j - 1]) {
+				OPT[k][j] = 1 + OPT[1 - k][j - 1];
+			}
+			else {
+				OPT[k][j] = max(OPT[1 - k][j], OPT[k][j - 1]);
+			}
 		}
 	}
-	return OPT[m][n];
+	return OPT[m % 2][n];
 }
 
 int main(void) {
